@@ -1,0 +1,13 @@
+Package: windowlickr
+Type: Package
+Title: Simple Genome-window BCF iteration
+Version: 0.1.0
+Author: Kevin Murray
+Maintainer: Kevin Murray <foss@kdmurray.id.au>
+Description: Iterates (a la foreach) over genome windows in genetic variation files (BCF/VCF)
+License: MPL-2
+Encoding: UTF-8
+LazyData: true
+Imports: Rcpp, doFuture, foreach
+LinkingTo: Rcpp
+RoxygenNote: 7.1.1
