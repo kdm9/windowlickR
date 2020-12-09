@@ -5,6 +5,6 @@
 #' @name windowlickr
 #' @docType package
 #' @author Kevin Murray
-#' @import Rcpp foreach dplyr purrr
+#' @import Rcpp
 #' @useDynLib windowlickr
 NULL

@@ -3,7 +3,4 @@
 export(bcf_getSamples)
 export(bcf_getWindows)
 import(Rcpp)
-import(dplyr)
-import(foreach)
-import(purrr)
 useDynLib(windowlickr)

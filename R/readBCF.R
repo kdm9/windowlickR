@@ -103,7 +103,7 @@ bcf_getWindows = function(path, windowsize=1000, slide=windowsize, chrom=NULL, f
       to = ctglen - windowsize + slide
     }
     for (start in seq(from, to, slide)) {
-      stop = start + windowsize - 1
+      stop = min(start + windowsize - 1, to)
       region = sprintf("%s:%d-%d", name, start, stop)
       res = rbind(res, data.frame(region,contig=name, start, stop, stringsAsFactors = F))
     }
