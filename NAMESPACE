@@ -2,5 +2,6 @@
 
 export(bcf_getSamples)
 export(bcf_getWindows)
+export(windowlickr)
 import(Rcpp)
 useDynLib(windowlickr)
