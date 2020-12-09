@@ -9,5 +9,5 @@ License: MPL-2
 Encoding: UTF-8
 LazyData: true
 Imports: Rcpp, doFuture, foreach
-LinkingTo: Rcpp
+LinkingTo: Rcpp, Rhtslib, zlibbioc
 RoxygenNote: 7.1.1
