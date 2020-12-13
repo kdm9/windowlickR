@@ -14,6 +14,8 @@ require(foreach)
 #' @param from Only generate windows starting at `from` on `chrom`
 #' @param to Only generate windows until `to` on `chrom`
 #' @param errors One of "remove" or "stop", see ?foreach::foreach 's .errorhandling parameter
+#' @param export Vector of (string) variable names to export to the foreach loop
+#' @param pkgs Packages required to within `func`, require()'d by foreach loop
 #'
 #' @return list One list per window, with slots `regions`, `contig`, `start`, `stop`, `result`, where result is the return value of `func` applied to this window.
 #' @export

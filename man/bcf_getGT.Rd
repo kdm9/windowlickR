@@ -24,6 +24,10 @@ indexed BCF if this option is used.}
 
 \item{rowsAreSamples}{If TRUE, transpose GT matrix so rows are
 samples and SNPs are columns. This is the opposite of a BCF.}
+
+\item{minMAF}{Minimum SNP minor allle freq}
+
+\item{maxMissing}{Maximum SNP missing data rate}
 }
 \description{
 Reads gentoype (0, 1, 2, NA coded) from BCF. Optionally, reads only from a

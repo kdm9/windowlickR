@@ -3,7 +3,7 @@
 \docType{package}
 \name{windowlickr}
 \alias{windowlickr}
-\title{windowed_halfmax}
+\title{windowlickr}
 \usage{
 windowlickr(
   bcf,
@@ -25,6 +25,8 @@ windowlickr(
 \arguments{
 \item{bcf}{Indexed BCF or VCF file}
 
+\item{func}{Function to evaulate for each window. is called as func(window.metadata, window.genotypes) for each window. Func ideally returns a tibble or similar.}
+
 \item{windowsize}{Size of each window (required unless `windows` provided)}
 
 \item{slide}{Number of bases to skip between each window start (default `windowsize`)}
@@ -44,9 +46,13 @@ windowlickr(
 \item{to}{Only generate windows until `to` on `chrom`}
 
 \item{errors}{One of "remove" or "stop", see ?foreach::foreach 's .errorhandling parameter}
+
+\item{export}{Vector of (string) variable names to export to the foreach loop}
+
+\item{pkgs}{Packages required to within `func`, require()'d by foreach loop}
 }
 \value{
-data.frame  columns rho, halfmax, region, nsnp
+list One list per window, with slots `regions`, `contig`, `start`, `stop`, `result`, where result is the return value of `func` applied to this window.
 }
 \description{
 Windowed analyses of BCF files.

@@ -6,5 +6,6 @@
 #' @docType package
 #' @author Kevin Murray
 #' @import Rcpp
+#' @import foreach
 #' @useDynLib windowlickr
 NULL

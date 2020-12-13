@@ -7,6 +7,8 @@
 #' @param samples Extract gentypes of only `samples`. Default NULL = all.
 #' @param rowsAreSamples If TRUE, transpose GT matrix so rows are
 #'        samples and SNPs are columns. This is the opposite of a BCF.
+#' @param minMAF Minimum SNP minor allle freq
+#' @param maxMissing Maximum SNP missing data rate
 bcf_getGT = function(path, region=NULL, samples=NULL, rowsAreSamples=T, minMAF=0.0, maxMissing=1) {
   if (is.null(region)) region = ""
   if (is.null(samples)) samples = character(0)
