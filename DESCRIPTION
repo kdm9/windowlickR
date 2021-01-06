@@ -12,4 +12,4 @@ LazyData: true
 Imports: Rcpp, foreach
 LinkingTo: Rcpp, Rhtslib, zlibbioc
 RoxygenNote: 7.1.1
-Remotes: bioc::release/Rhtslib bioc::release/zlibbioc
+Remotes: bioc::release/Rhtslib, bioc::release/zlibbioc
