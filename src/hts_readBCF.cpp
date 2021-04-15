@@ -25,18 +25,11 @@ List readBCFQuery_(SEXP fname, SEXP reg, SEXP samplenames) {
     }
   }
   vector<string> samples = rdr.get_sample_names();
-  if (region == "") {
-    if (!rdr.read_all()) {
-      cerr << "Fail: read all" << endl;
-      return NULL;
-    }
-  } else {
-    if (!rdr.read_region(region)) {
-      cerr << "Fail: read region '" << region << "'" << endl;
-      return NULL;
-    }
-  }
 
+  if (!rdr.read_chunk(region)) {
+    cerr << "Fail: read region '" << region << "'" << endl;
+    return NULL;
+  }
   return List::create(
     Named("CHROM")=wrap(rdr.CHROM),
     Named("POS")=wrap(rdr.POS),
