@@ -19,13 +19,22 @@ List readBCFQuery_(SEXP fname, SEXP reg, SEXP samplenames) {
   KDMBCF::BCFReader rdr(filename);
 
   if (request_samples.size() > 0) {
-      if (!rdr.set_samples(request_samples)) return NULL;
+    if (!rdr.set_samples(request_samples)) {
+      cerr << "Fail: set samples" << endl;
+      return NULL;
+    }
   }
   vector<string> samples = rdr.get_sample_names();
   if (region == "") {
-    if (!rdr.read_all()) return NULL;
+    if (!rdr.read_all()) {
+      cerr << "Fail: read all" << endl;
+      return NULL;
+    }
   } else {
-    if (!rdr.read_region(region)) return NULL;
+    if (!rdr.read_region(region)) {
+      cerr << "Fail: read region '" << region << "'" << endl;
+      return NULL;
+    }
   }
 
   return List::create(
