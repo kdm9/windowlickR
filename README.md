@@ -1,6 +1,6 @@
 # WindowLickR
 
-A R/`foreach` interface to genome windows of genetic variation in BCF files.
+A R/`foreach` interface to genome windows of genetic variation in BCF or VCF files.
 
 # Usage
 
@@ -29,6 +29,11 @@ result =  windowlickr::windowlickr(
         )
     })
 ```
+
+## Changes
+
+- Version 0.2.0: implement VCF support
+- Version 0.1.0: initial version
 
 
 # Credits

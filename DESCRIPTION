@@ -1,7 +1,7 @@
 Package: windowlickr
 Type: Package
 Title: Simple Genome-window BCF Iteration
-Version: 0.1.0
+Version: 0.2.0
 Author: Kevin Murray
 Maintainer: Kevin Murray <foss@kdmurray.id.au>
 Description: Iterates (a la foreach) over genome windows in genetic variation files (BCF/VCF)
