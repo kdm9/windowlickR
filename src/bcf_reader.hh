@@ -19,6 +19,9 @@ public:
     if((bcf = bcf_open(filename.c_str(), "r")) == NULL) {
       throw runtime_error("Unable to open file.");
     }
+    if (hts_set_threads(bcf, 1) != 0) {
+      throw runtime_error("Unable to open file (set threads).");
+    }
     if((header = bcf_hdr_read(bcf)) == NULL) {
       throw runtime_error("Unable to read header.");
     }
