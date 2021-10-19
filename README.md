@@ -6,6 +6,8 @@
 
 A R/`foreach` interface to genome windows of genetic variation in BCF or VCF files.
 
+**NB: please upgrade to at least version 0.3.0: previous versions produced incorrect output**.
+
 # Usage
 
 ```R
