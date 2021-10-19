@@ -13,3 +13,6 @@ Imports: Rcpp, foreach
 LinkingTo: Rcpp, Rhtslib, zlibbioc
 RoxygenNote: 7.1.1
 Remotes: bioc::release/Rhtslib, bioc::release/zlibbioc
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
