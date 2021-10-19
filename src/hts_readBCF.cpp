@@ -4,7 +4,7 @@
 #include <htslib/vcf.h>
 #include <vector>
 #undef KDM_BCF_READER_USE_AD
-#include "bcf_reader.hh"
+#include "bcf_reader.h"
 
 using namespace Rcpp;
 using namespace std;
