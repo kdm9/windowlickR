@@ -165,10 +165,10 @@ protected:
     int32_t n = fill_buffer("GT", record);
     if (n < 1) return false;
     GT1.resize(nsamp);
-    for (int32_t i=0; i<nsamp; i++) {
+    for (int32_t i=0; i<n; i+=2) {
       int32_t a=bcf_gt_allele(buffer[i]), b=bcf_gt_allele(buffer[i+1]);
       int32_t altcnt = (a<0 || b< 0) ? -1 : a + b;
-      GT1[i] = altcnt;
+      GT1[i/2] = altcnt;
     }
     return true;
   }
